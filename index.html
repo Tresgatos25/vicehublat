@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guías GTA 6 - Trucos, Mapa, Dinero y Secretos de Vice City</title>
+    <meta name="description" content="Todas las guías, códigos de trucos, mapas de coleccionables y métodos para ganar dinero rápido en GTA 6.">
+    <style>
+        :root {
+            --bg-dark: #0b0c10;
+            --card-bg: rgba(20, 22, 31, 0.88);
+            --neon-pink: #ff2a85;
+            --neon-cyan: #00f3ff;
+            --text-main: #ffffff;
+            --text-muted: #b3b9c5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            /* Imagen de fondo fija estilo Vice City / Neón libre de derechos */
+            background-image: linear-gradient(to bottom, rgba(11, 12, 16, 0.78), rgba(11, 12, 16, 0.96)), 
+                              url('https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Navegación */
+        header {
+            background: rgba(11, 12, 16, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--neon-pink);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--neon-pink);
+            text-shadow: 0 0 10px rgba(255, 42, 133, 0.6);
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 1.2rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--neon-cyan);
+        }
+
+        /* Hero / Portada con imagen de fondo */
+        .hero {
+            padding: 4.5rem 5%;
+            text-align: center;
+            background-image: linear-gradient(135deg, rgba(255, 42, 133, 0.25), rgba(0, 243, 255, 0.2)),
+                              url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.1rem;
+            color: #e2e8f0;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1150px;
+            margin: 2rem auto;
+            padding: 0 5%;
+        }
+
+        /* Espacios para Google AdSense */
+        .ad-slot {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Cuadrícula de Artículos / Guías */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--neon-cyan);
+            padding-left: 12px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.25s, border-color 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-pink);
+        }
+
+        /* Fondo de imagen en cada tarjeta */
+        .card-img {
+            height: 170px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--neon-pink);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .card-body {
+            padding: 1.3rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .card-body p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .btn-read {
+            display: inline-block;
+            text-align: center;
+            background: rgba(0, 243, 255, 0.12);
+            color: var(--neon-cyan);
+            border: 1px solid var(--neon-cyan);
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .btn-read:hover {
+            background: var(--neon-cyan);
+            color: #000;
+        }
+
+        /* Banner de Afiliados (Conversión Directa) */
+        .affiliate-box {
+            margin: 3rem 0;
+            padding: 2.5rem;
+            border-radius: 14px;
+            background-image: linear-gradient(90deg, rgba(11, 12, 16, 0.94) 45%, rgba(255, 42, 133, 0.45)),
+                              url('https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid var(--neon-pink);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .affiliate-text {
+            max-width: 600px;
+        }
+
+        .affiliate-text h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--neon-cyan);
+        }
+
+        .btn-affiliate {
+            background: linear-gradient(45deg, var(--neon-pink), #ff5e3a);
+            color: white;
+            padding: 1rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: 0 4px 20px rgba(255, 42, 133, 0.5);
+            transition: transform 0.2s;
+        }
+
+        .btn-affiliate:hover {
+            transform: scale(1.04);
+        }
+
+        footer {
+            background: #060709;
+            text-align: center;
+            padding: 2rem 5%;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            nav { margin-top: 0.8rem; }
+            nav a { margin-left: 0; margin-right: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <a href="index.html" class="logo">VICE<span>HUB</span> 6</a>
+        <nav>
+            <a href="#guias">Guías</a>
+            <a href="#trucos">Trucos</a>
+            <a href="#mapa">Mapa</a>
+            <a href="#dinero">Dinero Rápido</a>
+        </nav>
+    </header>
+
+    <!-- PORTADA CON IMAGEN DE FONDO -->
+    <section class="hero">
+        <h1>Domina Vice City desde el Día 1</h1>
+        <p>Guías rápidas, códigos de trucos verificados, ubicaciones secretas y métodos para multiplicar tu dinero en GTA 6 sin perder tiempo.</p>
+    </section>
+
+    <div class="container">
+
+        <!-- BLOQUE ADSENSE SUPERIOR -->
+        <div class="ad-slot">
+            [ESPACIO PARA ANUNCIO GOOGLE ADSENSE - BANNER HORIZONTAL 728x90 / ADAPTABLE]
+        </div>
+
+        <!-- SECCIÓN DE GUÍAS DESTACADAS -->
+        <h2 class="section-title" id="guias">Guías y Trucos Más Buscados</h2>
+        
+        <div class="grid">
+            <!-- Tarjeta 1 -->
+            <article class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1553481187-be93c21490a9?auto=format&fit=crop&w=800&q=80');">
+                    <span class="tag">Trucos</span>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3>Lista Completa de Códigos y Trucos (PS5 / Xbox)</h3>
+                        <p>Invencibilidad, armas al máximo, bajar nivel de búsqueda y aparición instantánea de vehículos deportivos.</p>
+                    </div>
+                    <a href="trucos.html" class="btn-read">Ver todos los códigos →</a>
+                </div>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80');">
+                    <span class="tag">Vehículos</span>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3>Los 5 Autos Más Rápidos y Dónde Robarlos Gratis</h3>
+                        <p>Ubicación exacta en el mapa para conseguir superdeportivos sin gastar un solo dólar en concesionarios.</p>
+                    </div>
+                    <a href="autos-gratis.html" class="btn-read">Ver ubicaciones →</a>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80');">
+                    <span class="tag">Dinero</span>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3>Cómo Ganar $1,000,000 en tu Primera Hora</h3>
+                        <p>Ruta de robos rápidos, misiones secundarias ocultas y negocios iniciales más rentables en Leonida.</p>
+                    </div>
+                    <a href="dinero-rapido.html" class="btn-read">Leer guía paso a paso →</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- BLOQUE ADSENSE INTERMEDIO -->
+        <div class="ad-slot">
+            [ESPACIO PARA ANUNCIO GOOGLE ADSENSE - IN-FEED / RECTÁNGULO]
+        </div>
+
+        <!-- CAJA DE AFILIADOS (MONETIZACIÓN INMEDIATA SIN ADSENSE) -->
+        <section class="affiliate-box">
+            <div class="affiliate-text">
+                <h2>¿Aún no tienes GTA 6 o necesitas saldo?</h2>
+                <p>Consigue códigos digitales oficiales para PlayStation, Xbox y PC con entrega inmediata y descuento especial usando nuestro enlace de socio.</p>
+            </div>
+            <!-- REEMPLAZA EL '#' CON TU ENLACE DE AFILIADO DE ENEBA, INSTANT GAMING O AMAZON -->
+            <a href="#" target="_blank" rel="nofollow noopener" class="btn-affiliate">Ver Ofertas Disponibles 🔥</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 ViceHub 6 - Portal independiente de guías y noticias. No afiliado oficialmente con Rockstar Games o Take-Two Interactive.</p>
+    </footer>
+
+</body>
+</html>
