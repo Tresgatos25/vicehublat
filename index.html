@@ -424,43 +424,6 @@
             color: var(--neon-cyan);
         }
 
-        /* Banner de Afiliados */
-        .affiliate-box {
-            margin: 3.5rem 0;
-            padding: 2.6rem;
-            border-radius: 18px;
-            background-image: 
-                linear-gradient(105deg, rgba(10, 12, 20, 0.96) 45%, rgba(255, 42, 133, 0.38)),
-                url('https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=1400&q=85');
-            background-size: cover;
-            background-position: center;
-            border: 1px solid rgba(255, 42, 133, 0.55);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.8rem;
-        }
-
-        .affiliate-text { max-width: 620px; }
-        .affiliate-text span { color: var(--neon-cyan); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
-        .affiliate-text h2 { font-family: 'Orbitron', sans-serif; font-size: 1.65rem; margin: 0.4rem 0 0.7rem; }
-        .affiliate-text p { color: #d1d9e6; font-size: 0.96rem; }
-
-        .btn-affiliate {
-            background: linear-gradient(45deg, var(--neon-pink), #ff5e3a);
-            color: #fff;
-            padding: 1.05rem 1.9rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1rem;
-            box-shadow: 0 6px 25px rgba(255, 42, 133, 0.55);
-            transition: transform 0.25s;
-        }
-
-        .btn-affiliate:hover { transform: translateY(-3px) scale(1.03); }
-
         /* Redes Sociales */
         .social-strip {
             background: var(--bg-card);
@@ -468,7 +431,7 @@
             border-radius: 14px;
             padding: 1.8rem;
             text-align: center;
-            margin-bottom: 2rem;
+            margin: 3rem 0 2rem;
         }
 
         .social-strip h3 { font-family: 'Orbitron', sans-serif; font-size: 1.15rem; margin-bottom: 0.4rem; }
@@ -498,9 +461,25 @@
             font-size: 0.85rem;
         }
 
+        .legal-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--neon-cyan);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            border-bottom: 1px dashed rgba(0, 245, 212, 0.4);
+            padding-bottom: 2px;
+            transition: color 0.25s;
+        }
+
+        .legal-link:hover {
+            color: var(--neon-pink);
+            border-bottom-color: var(--neon-pink);
+        }
+
         @media (max-width: 680px) {
             header { justify-content: center; text-align: center; }
-            .btn-affiliate { width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -516,7 +495,7 @@
             <a href="#guias">Guías</a>
             <a href="#trucos-rapidos">Trucos</a>
             <a href="#calculadora">Calculadora</a>
-            <a href="#ofertas">Ofertas</a>
+            <a href="legal.html">Aviso Legal</a>
         </nav>
     </header>
 
@@ -644,16 +623,10 @@
             </div>
         </div>
 
-        <!-- BANNER DE AFILIADOS -->
-        <section class="affiliate-box" id="ofertas">
-            <div class="affiliate-text">
-                <span>⚡ Ofertas Verificadas para Gamers</span>
-                <h2>¿Aún no tienes GTA 6 o necesitas saldo digital?</h2>
-                <p>Consigue códigos digitales oficiales para PlayStation, Xbox y PC con entrega inmediata y descuento especial usando nuestro enlace de socio.</p>
-            </div>
-            <!-- REEMPLAZA EL '#' CON TU ENLACE DE AFILIADO DE ENEBA, INSTANT GAMING O AMAZON -->
-            <a href="#" target="_blank" rel="nofollow noopener" class="btn-affiliate">Ver Ofertas Disponibles 🔥</a>
-        </section>
+        <!-- BLOQUE PUBLICITARIO INFERIOR -->
+        <div class="ad-slot">
+            [ESPACIO PUBLICITARIO INFERIOR - DISPLAY]
+        </div>
 
         <!-- REDES SOCIALES -->
         <section class="social-strip">
@@ -671,6 +644,7 @@
     <footer>
         <p>© 2026 <strong>ViceHub Lat</strong> - Portal independiente de guías y noticias para Latinoamérica.</p>
         <p style="margin-top: 6px; font-size: 0.78rem; opacity: 0.7;">Este sitio no está afiliado, asociado ni respaldado oficialmente por Rockstar Games o Take-Two Interactive.</p>
+        <a href="legal.html" class="legal-link">Aviso Legal, Política de Privacidad y Derechos ARCO</a>
     </footer>
 
     <script>
