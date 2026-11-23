@@ -1,679 +1,345 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViceHub Lat | Guías, Trucos, Mapa y Secretos de GTA 6</title>
-    <meta name="description" content="Portal #1 en español de GTA 6: lista de trucos verificados, ubicación de autos gratis, calculadora de ganancias y métodos para ganar dinero rápido en Vice City.">
-    
-    <!-- Fuentes Gamer Modernas -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViceHub LAT | Guías, trucos y calculadora para GTA Vice City</title>
+<meta name="description" content="Guías, trucos, ubicación de autos y una calculadora de ganancias para GTA Vice City, en español. Sitio de fans, no oficial.">
+<link rel="canonical" href="https://vicehub.lat/">
+<meta property="og:title" content="ViceHub LAT | Guías y trucos de Vice City">
+<meta property="og:description" content="Guías, trucos y herramientas para jugadores hispanohablantes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vicehub.lat/">
+<meta name="robots" content="index, follow">
 
-    <style>
-        :root {
-            --bg-main: #06070c;
-            --bg-card: rgba(16, 19, 30, 0.85);
-            --neon-pink: #ff2a85;
-            --neon-purple: #9d4edd;
-            --neon-cyan: #00f5d4;
-            --text-primary: #ffffff;
-            --text-secondary: #a3adbe;
-            --border-glass: rgba(255, 255, 255, 0.1);
-        }
+<!-- 1) GOOGLE SEARCH CONSOLE: pega aquí tu código de verificación -->
+<meta name="google-site-verification" content="PEGA_AQUI_TU_CODIGO">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 12% 18%, rgba(255, 42, 133, 0.15), transparent 38%),
-                radial-gradient(circle at 88% 35%, rgba(0, 245, 212, 0.12), transparent 38%),
-                linear-gradient(to bottom, rgba(6, 7, 12, 0.84), rgba(6, 7, 12, 0.98)),
-                url('https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
+<style>
+:root{
+  --bg:#0a0a12; --panel:#13131f; --line:#26263a; --text:#e9e9f2; --muted:#a2a2b8;
+  --cyan:#00f0c8; --pink:#ff2e88; --link:#5ff5da;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 Inter,system-ui,sans-serif}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Orbitron,Inter,sans-serif;line-height:1.2;margin:0 0 .6em}
 
-        /* Cinta superior de última hora */
-        .top-ticker {
-            background: linear-gradient(90deg, var(--neon-pink), var(--neon-purple), var(--neon-cyan));
-            color: #05060a;
-            font-weight: 800;
-            font-size: 0.78rem;
-            text-align: center;
-            padding: 7px 12px;
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
-        }
+.bar{background:linear-gradient(90deg,var(--pink),var(--cyan));color:#06060c;text-align:center;font-weight:600;font-size:14px;padding:8px 12px}
+header.top{position:sticky;top:0;z-index:20;background:rgba(10,10,18,.94);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap}
+.logo{font:900 24px Orbitron,sans-serif;color:#fff;text-decoration:none}
+.logo span{color:var(--cyan)}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;margin-left:20px}
+nav a:hover{color:#fff}
 
-        /* Navegación Glassmorphism */
-        header {
-            background: rgba(6, 7, 12, 0.88);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border-bottom: 1px solid var(--border-glass);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 1rem 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+.hero{padding:90px 0 70px;text-align:center;background:radial-gradient(ellipse at 50% 0,#2a1245 0,transparent 65%)}
+.hero h1{font-size:clamp(30px,6vw,58px);font-weight:900}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero p{max-width:60ch;margin:0 auto 28px;color:var(--muted)}
+.search{display:flex;max-width:560px;margin:0 auto;border:1px solid var(--cyan);border-radius:999px;overflow:hidden;background:var(--panel)}
+.search input{flex:1;background:none;border:0;color:var(--text);padding:15px 22px;font:inherit}
+.search button{background:var(--cyan);color:#06060c;border:0;padding:0 24px;font:600 16px Inter;cursor:pointer}
 
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.55rem;
-            font-weight: 900;
-            color: #fff;
-            text-decoration: none;
-            letter-spacing: 1.5px;
-        }
+section.block{padding:56px 0;border-top:1px solid var(--line)}
+section.block h2{font-size:clamp(22px,3.5vw,32px)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card h3{font-size:17px}
+.card p{color:var(--muted);margin:0 0 12px;font-size:15px}
+.tag{display:inline-block;font-size:13px;font-weight:600;padding:2px 10px;border-radius:6px;background:var(--pink);color:#fff;margin-bottom:10px}
+.tag.c{background:var(--cyan);color:#06060c}
 
-        .logo span {
-            background: linear-gradient(45deg, var(--neon-pink), var(--neon-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+.ad{margin:32px auto;max-width:728px;min-height:90px;border:1px dashed var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
 
-        nav {
-            display: flex;
-            gap: 1.4rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+.calc{display:grid;gap:14px;max-width:440px}
+.calc label{display:grid;gap:4px;font-weight:600;font-size:15px}
+.calc input{background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--text);padding:11px 14px;font:inherit}
+.calc button,.btn{background:var(--cyan);color:#06060c;border:0;border-radius:8px;padding:12px 20px;font:600 16px Inter;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+#calcOut{font:700 22px Orbitron,sans-serif;color:var(--cyan);min-height:1.4em}
 
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.25s;
-        }
+.note{font-size:14px;color:var(--muted);border-left:3px solid var(--pink);padding-left:12px;margin-top:16px}
+.legal{max-width:70ch}
+.legal h3{margin-top:1.6em;font-size:18px}
+.legal li{margin-bottom:.4em}
+.legal .upd{color:var(--muted);font-size:14px}
 
-        nav a:hover {
-            color: var(--neon-cyan);
-        }
+form.contact{display:grid;gap:14px;max-width:520px}
+form.contact input,form.contact textarea{background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--text);padding:12px 14px;font:inherit;width:100%}
 
-        /* Hero Principal */
-        .hero {
-            padding: 5rem 6% 4.5rem;
-            text-align: center;
-            background-image: 
-                linear-gradient(to bottom, rgba(6, 7, 12, 0.45), rgba(6, 7, 12, 0.98)),
-                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=85');
-            background-size: cover;
-            background-position: center;
-            border-bottom: 1px solid var(--border-glass);
-        }
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:14px}
+footer nav a{margin:0 18px 8px 0;display:inline-block}
 
-        .badge-hero {
-            display: inline-block;
-            background: rgba(255, 42, 133, 0.18);
-            border: 1px solid var(--neon-pink);
-            color: #ff85b8;
-            font-size: 0.76rem;
-            font-weight: 700;
-            padding: 5px 15px;
-            border-radius: 50px;
-            margin-bottom: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+#cookies{position:fixed;left:16px;right:16px;bottom:16px;max-width:620px;margin:0 auto;background:var(--panel);border:1px solid var(--cyan);border-radius:12px;padding:18px 20px;z-index:50;display:none;font-size:15px}
+#cookies .row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+#cookies button{border-radius:8px;padding:9px 18px;font:600 15px Inter;cursor:pointer;border:1px solid var(--cyan);background:var(--cyan);color:#06060c}
+#cookies button.alt{background:none;color:var(--text);border-color:var(--line)}
 
-        .hero h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: clamp(2rem, 4.5vw, 3.2rem);
-            font-weight: 900;
-            line-height: 1.15;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            text-shadow: 0 4px 25px rgba(0, 0, 0, 0.9);
-        }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (max-width:640px){nav a{margin:0 14px 0 0;font-size:15px}.hero{padding:60px 0 50px}}
+</style>
 
-        .hero h1 span {
-            color: var(--neon-cyan);
-        }
-
-        .hero p {
-            max-width: 640px;
-            margin: 0 auto 2rem;
-            font-size: 1.05rem;
-            color: #d6deeb;
-        }
-
-        /* Buscador en vivo */
-        .search-box {
-            max-width: 540px;
-            margin: 0 auto;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            border: 1px solid rgba(0, 245, 212, 0.45);
-            background: rgba(13, 16, 26, 0.92);
-            color: #fff;
-            font-size: 0.98rem;
-            outline: none;
-            box-shadow: 0 0 25px rgba(0, 245, 212, 0.15);
-            transition: all 0.3s;
-        }
-
-        .search-box input:focus {
-            border-color: var(--neon-pink);
-            box-shadow: 0 0 30px rgba(255, 42, 133, 0.35);
-        }
-
-        /* Contenedor General */
-        .container {
-            max-width: 1200px;
-            margin: 2.5rem auto;
-            padding: 0 6%;
-        }
-
-        /* Espacios Publicitarios */
-        .ad-slot {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px dashed rgba(255, 255, 255, 0.16);
-            border-radius: 10px;
-            padding: 1.1rem;
-            text-align: center;
-            margin: 2rem 0;
-            color: #6b768a;
-            font-size: 0.8rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* Títulos de Sección */
-        .section-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.45rem;
-            margin: 2.5rem 0 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .section-title::before {
-            content: '';
-            width: 6px;
-            height: 26px;
-            background: linear-gradient(to bottom, var(--neon-pink), var(--neon-cyan));
-            border-radius: 4px;
-        }
-
-        /* Grid de Guías */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            gap: 1.8rem;
-        }
-
-        .card {
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--border-glass);
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(255, 42, 133, 0.65);
-            box-shadow: 0 12px 30px rgba(255, 42, 133, 0.2);
-        }
-
-        .card-img-wrapper {
-            height: 185px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .card-img {
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.5s ease;
-        }
-
-        .card:hover .card-img {
-            transform: scale(1.08);
-        }
-
-        .card-img-wrapper::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(16, 19, 30, 1) 5%, transparent 65%);
-        }
-
-        .tag {
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            z-index: 2;
-            background: linear-gradient(45deg, var(--neon-pink), #d90429);
-            color: #fff;
-            font-size: 0.72rem;
-            font-weight: 800;
-            padding: 4px 12px;
-            border-radius: 6px;
-            text-transform: uppercase;
-        }
-
-        .tag.cyan { background: linear-gradient(45deg, #00b4d8, #0077b6); }
-        .tag.purple { background: linear-gradient(45deg, #9d4edd, #5a189a); }
-
-        .card-body {
-            padding: 0.5rem 1.5rem 1.6rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card-body h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.65rem;
-            line-height: 1.35;
-        }
-
-        .card-body p {
-            color: var(--text-secondary);
-            font-size: 0.92rem;
-            margin-bottom: 1.4rem;
-        }
-
-        .btn-read {
-            display: block;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--neon-cyan);
-            border: 1px solid rgba(0, 245, 212, 0.35);
-            padding: 0.75rem 1.2rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: all 0.25s;
-        }
-
-        .btn-read:hover {
-            background: var(--neon-cyan);
-            color: #05060a;
-            box-shadow: 0 0 20px rgba(0, 245, 212, 0.4);
-        }
-
-        /* Tabla Rápida de Trucos con Botón Copiar */
-        .panel-box {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
-            border-radius: 16px;
-            padding: 1.8rem;
-            margin: 2rem 0;
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 500px;
-        }
-
-        th, td {
-            padding: 14px 12px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        th {
-            color: var(--neon-cyan);
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-        }
-
-        .code-pill {
-            background: #1a1f33;
-            border: 1px solid var(--neon-pink);
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 0.95rem;
-        }
-
-        .copy-btn {
-            background: rgba(0, 245, 212, 0.15);
-            color: var(--neon-cyan);
-            border: 1px solid var(--neon-cyan);
-            padding: 4px 10px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-left: 8px;
-        }
-
-        .copy-btn:hover {
-            background: var(--neon-cyan);
-            color: #000;
-        }
-
-        /* Mini Herramienta: Calculadora de Ganancias */
-        .calc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.2rem;
-            margin-top: 1rem;
-        }
-
-        .calc-group label {
-            display: block;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 6px;
-        }
-
-        .calc-group select, .calc-group input {
-            width: 100%;
-            padding: 0.75rem;
-            border-radius: 8px;
-            background: #111524;
-            border: 1px solid var(--border-glass);
-            color: #fff;
-            font-size: 0.95rem;
-        }
-
-        .calc-result {
-            margin-top: 1.5rem;
-            padding: 1.2rem;
-            border-radius: 10px;
-            background: rgba(0, 245, 212, 0.08);
-            border: 1px solid rgba(0, 245, 212, 0.3);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .calc-result strong {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.4rem;
-            color: var(--neon-cyan);
-        }
-
-        /* Redes Sociales */
-        .social-strip {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
-            border-radius: 14px;
-            padding: 1.8rem;
-            text-align: center;
-            margin: 3rem 0 2rem;
-        }
-
-        .social-strip h3 { font-family: 'Orbitron', sans-serif; font-size: 1.15rem; margin-bottom: 0.4rem; }
-        .social-links { display: flex; justify-content: center; gap: 1rem; margin-top: 1.1rem; flex-wrap: wrap; }
-
-        .social-btn {
-            padding: 0.65rem 1.4rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            color: #fff;
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid var(--border-glass);
-            transition: 0.25s;
-        }
-
-        .social-btn:hover { background: var(--neon-pink); border-color: var(--neon-pink); }
-
-        footer {
-            background: #040508;
-            text-align: center;
-            padding: 2.4rem 6%;
-            margin-top: 3rem;
-            border-top: 1px solid var(--border-glass);
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-
-        .legal-link {
-            display: inline-block;
-            margin-top: 12px;
-            color: var(--neon-cyan);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.88rem;
-            border-bottom: 1px dashed rgba(0, 245, 212, 0.4);
-            padding-bottom: 2px;
-            transition: color 0.25s;
-        }
-
-        .legal-link:hover {
-            color: var(--neon-pink);
-            border-bottom-color: var(--neon-pink);
-        }
-
-        @media (max-width: 680px) {
-            header { justify-content: center; text-align: center; }
-        }
-    </style>
+<!-- 2) GOOGLE ANALYTICS 4: se carga solo si el visitante acepta cookies (ver script al final).
+        Cambia G-XXXXXXXXXX por tu ID de medición. -->
 </head>
 <body>
 
-    <div class="top-ticker">
-        ⚡ ACTUALIZADO 2026: Nuevas guías, códigos rápidos y calculadora de ganancias para Vice City ⚡
+<div class="bar">Sitio de fans no oficial · Guías y trucos de GTA Vice City</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/">VICE<span>HUB</span> LAT</a>
+    <nav aria-label="Principal">
+      <a href="#guias">Guías</a>
+      <a href="#trucos">Trucos</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#sobre-nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Domina <em>Vice City</em> desde el día 1</h1>
+      <p>Guías claras, trucos que probamos nosotros y herramientas para planear tu dinero en el juego.</p>
+      <form class="search" role="search" onsubmit="return buscar(event)">
+        <input id="q" type="search" placeholder="Buscar guía: trucos, autos, dinero, armas" aria-label="Buscar guía">
+        <button type="submit">Buscar</button>
+      </form>
     </div>
+  </section>
 
-    <header>
-        <a href="index.html" class="logo">VICE<span>HUB</span> LAT</a>
-        <nav>
-            <a href="#guias">Guías</a>
-            <a href="#trucos-rapidos">Trucos</a>
-            <a href="#calculadora">Calculadora</a>
-            <a href="legal.html">Aviso Legal</a>
-        </nav>
-    </header>
+  <!-- 3) ANUNCIO 1: reemplaza este bloque por tu código de AdSense cuando te aprueben -->
+  <div class="wrap"><div class="ad" aria-label="Espacio publicitario">Espacio para anuncio</div></div>
 
-    <section class="hero">
-        <div class="badge-hero">🔥 Comunidad Gamer #1 en Español</div>
-        <h1>Domina <span>Vice City</span> desde el Día 1</h1>
-        <p>Guías directas, códigos de trucos verificados, ubicación de autos rápidos y herramientas para multiplicar tu dinero en el juego.</p>
-        
-        <div class="search-box">
-            <input type="text" id="searchInput" onkeyup="filterGuides()" placeholder="🔍 Buscar guía (ej. trucos, autos, dinero, armas)...">
-        </div>
-    </section>
-
-    <div class="container">
-
-        <!-- BLOQUE PUBLICITARIO SUPERIOR -->
-        <div class="ad-slot">
-            [ESPACIO PUBLICITARIO SUPERIOR - BANNER ADAPTABLE 728x90]
-        </div>
-
-        <!-- GUÍAS DESTACADAS -->
-        <h2 class="section-title" id="guias">Guías y Secretos Destacados</h2>
-        
-        <div class="grid" id="guidesGrid">
-            <article class="card">
-                <div class="card-img-wrapper">
-                    <span class="tag">Trucos</span>
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1553481187-be93c21490a9?auto=format&fit=crop&w=800&q=80');"></div>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <h3>Lista Completa de Códigos y Trucos (PS5, Xbox y PC)</h3>
-                        <p>Invencibilidad, armas al máximo, bajar nivel de búsqueda policial y aparición instantánea de superdeportivos.</p>
-                    </div>
-                    <a href="trucos.html" class="btn-read">Ver guía completa →</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-img-wrapper">
-                    <span class="tag cyan">Vehículos</span>
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80');"></div>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <h3>Autos Más Rápidos y Dónde Conseguirlos Gratis</h3>
-                        <p>Zonas clave del mapa y horarios donde aparecen los deportivos más veloces sin gastar un solo dólar.</p>
-                    </div>
-                    <a href="autos-gratis.html" class="btn-read">Ver ubicaciones →</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-img-wrapper">
-                    <span class="tag purple">Dinero</span>
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80');"></div>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <h3>Cómo Ganar Dinero Rápido desde tus Primeras Horas</h3>
-                        <p>Ruta de encargos iniciales, gestión inteligente de recursos y actividades más rentables para empezar con ventaja.</p>
-                    </div>
-                    <a href="dinero-rapido.html" class="btn-read">Leer ruta de dinero →</a>
-                </div>
-            </article>
-        </div>
-
-        <!-- TABLA INTERACTIVA DE TRUCOS RÁPIDOS -->
-        <h2 class="section-title" id="trucos-rapidos">Códigos Rápidos (Un Clic para Copiar)</h2>
-        <div class="panel-box">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Efecto en el Juego</th>
-                        <th>Número / Código</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Salud y Blindaje al 100%</td>
-                        <td><span class="code-pill">1-999-887-853</span> <button class="copy-btn" onclick="copyCode('1-999-887-853', this)">Copiar</button></td>
-                    </tr>
-                    <tr>
-                        <td>Todas las Armas y Munición Máxima</td>
-                        <td><span class="code-pill">1-999-866-587</span> <button class="copy-btn" onclick="copyCode('1-999-866-587', this)">Copiar</button></td>
-                    </tr>
-                    <tr>
-                        <td>Reducir Nivel de Búsqueda Policial</td>
-                        <td><span class="code-pill">1-999-529-93787</span> <button class="copy-btn" onclick="copyCode('1-999-529-93787', this)">Copiar</button></td>
-                    </tr>
-                    <tr>
-                        <td>Aparecer Auto Deportivo Rápido</td>
-                        <td><span class="code-pill">1-999-266-38</span> <button class="copy-btn" onclick="copyCode('1-999-266-38', this)">Copiar</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- BLOQUE PUBLICITARIO INTERMEDIO -->
-        <div class="ad-slot">
-            [ESPACIO PUBLICITARIO INTERMEDIO - IN-FEED]
-        </div>
-
-        <!-- HERRAMIENTA INTERACTIVA: CALCULADORA DE GANANCIAS -->
-        <h2 class="section-title" id="calculadora">Calculadora de Ganancias en Vice City</h2>
-        <div class="panel-box">
-            <p style="color: var(--text-secondary); font-size: 0.92rem;">Calcula cuánto dinero virtual puedes acumular según el tipo de actividad y tus horas de juego semanales:</p>
-            <div class="calc-grid">
-                <div class="calc-group">
-                    <label for="activityType">Actividad Principal</label>
-                    <select id="activityType" onchange="calculateEarnings()">
-                        <option value="85000">Encargos Rápidos y Contratos ($85,000/h)</option>
-                        <option value="160000">Carreras Callejeras y Apuestas ($160,000/h)</option>
-                        <option value="320000">Golpes Coordinados y Negocios ($320,000/h)</option>
-                    </select>
-                </div>
-                <div class="calc-group">
-                    <label for="hoursInput">Horas de juego a la semana</label>
-                    <input type="number" id="hoursInput" value="5" min="1" max="100" oninput="calculateEarnings()">
-                </div>
-            </div>
-            <div class="calc-result">
-                <span>Ganancia Semanal Estimada:</span>
-                <strong id="totalOutput">$425,000</strong>
-            </div>
-        </div>
-
-        <!-- BLOQUE PUBLICITARIO INFERIOR -->
-        <div class="ad-slot">
-            [ESPACIO PUBLICITARIO INFERIOR - DISPLAY]
-        </div>
-
-        <!-- REDES SOCIALES -->
-        <section class="social-strip">
-            <h3>Únete a la Comunidad ViceHub Lat</h3>
-            <p style="color: var(--text-secondary); font-size: 0.92rem;">Clips diarios, secretos ocultos y alertas de nuevos trucos en nuestras redes oficiales.</p>
-            <div class="social-links">
-                <a href="#" target="_blank" class="social-btn">📘 Facebook</a>
-                <a href="#" target="_blank" class="social-btn">🎵 TikTok</a>
-                <a href="#" target="_blank" class="social-btn">▶️ YouTube Shorts</a>
-            </div>
-        </section>
-
+  <section class="block" id="guias">
+    <div class="wrap">
+      <h2>Guías destacadas</h2>
+      <div class="grid">
+        <article class="card" id="trucos">
+          <span class="tag">Trucos</span>
+          <h3>Todos los códigos de trucos por plataforma</h3>
+          <p>Lista probada en PC y consola, con efecto de cada código y advertencias sobre los logros.</p>
+          <a href="/guias/trucos.html">Leer guía</a>
+        </article>
+        <article class="card">
+          <span class="tag c">Vehículos</span>
+          <h3>Dónde encontrar los autos más rápidos</h3>
+          <p>Ubicaciones con mapa, velocidad máxima y cuáles conviene guardar en tu garaje.</p>
+          <a href="/guias/autos-rapidos.html">Leer guía</a>
+        </article>
+        <article class="card">
+          <span class="tag">Dinero</span>
+          <h3>Cómo conseguir dinero rápido al empezar</h3>
+          <p>Trabajos, propiedades y rutas ordenados por ganancia por hora.</p>
+          <a href="/guias/dinero-rapido.html">Leer guía</a>
+        </article>
+      </div>
+      <p class="note">Cada guía debe tener tu propio texto (800 palabras o más) y tus propias capturas. Reemplaza estos tres ejemplos por tus artículos reales.</p>
     </div>
+  </section>
 
-    <footer>
-        <p>© 2026 <strong>ViceHub Lat</strong> - Portal independiente de guías y noticias para Latinoamérica.</p>
-        <p style="margin-top: 6px; font-size: 0.78rem; opacity: 0.7;">Este sitio no está afiliado, asociado ni respaldado oficialmente por Rockstar Games o Take-Two Interactive.</p>
-        <a href="legal.html" class="legal-link">Aviso Legal, Política de Privacidad y Derechos ARCO</a>
-    </footer>
+  <!-- 4) AFILIADOS: cambia los enlaces por los tuyos y conserva el aviso -->
+  <section class="block" id="recomendados">
+    <div class="wrap">
+      <h2>Equipo y juegos recomendados</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Juegos para PC</h3>
+          <p>Compara precios de llaves digitales antes de comprar.</p>
+          <a class="btn" href="TU_ENLACE_DE_AFILIADO_1" rel="sponsored noopener" target="_blank">Ver ofertas</a>
+        </div>
+        <div class="card">
+          <h3>Mandos y periféricos</h3>
+          <p>Controles que usamos para jugar en PC sin problemas de compatibilidad.</p>
+          <a class="btn" href="TU_ENLACE_DE_AFILIADO_2" rel="sponsored noopener" target="_blank">Ver mandos</a>
+        </div>
+        <div class="card">
+          <h3>VPN para jugar y proteger tu conexión</h3>
+          <p>Útil en redes públicas y para evitar bloqueos regionales de tiendas.</p>
+          <a class="btn" href="TU_ENLACE_DE_AFILIADO_3" rel="sponsored noopener" target="_blank">Ver opciones</a>
+        </div>
+      </div>
+      <p class="note">Aviso de afiliados: algunos enlaces de esta sección son de afiliado. Si compras a través de ellos, podemos recibir una comisión sin costo extra para ti.</p>
+    </div>
+  </section>
 
-    <script>
-        // Buscador en vivo
-        function filterGuides() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const cards = document.querySelectorAll('#guidesGrid .card');
-            cards.forEach(card => {
-                const text = card.innerText.toLowerCase();
-                card.style.display = text.includes(input) ? 'flex' : 'none';
-            });
-        }
+  <section class="block" id="calculadora">
+    <div class="wrap">
+      <h2>Calculadora de ganancias</h2>
+      <p>Calcula cuánto tardas en juntar el dinero que necesitas en el juego.</p>
+      <div class="calc">
+        <label>Dinero que necesitas
+          <input id="meta" type="number" min="0" value="500000" inputmode="numeric">
+        </label>
+        <label>Ganancia por hora de juego
+          <input id="hora" type="number" min="1" value="40000" inputmode="numeric">
+        </label>
+        <button type="button" onclick="calcular()">Calcular tiempo</button>
+        <div id="calcOut" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
 
-        // Copiar código al portapapeles
-        function copyCode(code, btn) {
-            navigator.clipboard.writeText(code);
-            const original = btn.innerText;
-            btn.innerText = "¡Copiado!";
-            setTimeout(() => { btn.innerText = original; }, 1500);
-        }
+  <!-- ANUNCIO 2 -->
+  <div class="wrap"><div class="ad" aria-label="Espacio publicitario">Espacio para anuncio</div></div>
 
-        // Calculadora de ganancias
-        function calculateEarnings() {
-            const rate = parseInt(document.getElementById('activityType').value) || 0;
-            const hours = parseInt(document.getElementById('hoursInput').value) || 0;
-            const total = rate * hours;
-            document.getElementById('totalOutput').innerText = "$" + total.toLocaleString('en-US');
-        }
-    </script>
+  <section class="block" id="sobre-nosotros">
+    <div class="wrap legal">
+      <h2>Sobre nosotros</h2>
+      <p>ViceHub LAT es un sitio hecho por fans para jugadores hispanohablantes de GTA Vice City. Probamos los trucos y rutas antes de publicarlos y los actualizamos cuando cambia el juego.</p>
+      <p>Si encuentras un error o quieres sugerir una guía, escríbenos desde la sección de contacto.</p>
+    </div>
+  </section>
 
+  <section class="block" id="contacto">
+    <div class="wrap">
+      <h2>Contacto</h2>
+      <p>Escríbenos a <a href="mailto:contacto@vicehub.lat">contacto@vicehub.lat</a> o usa este formulario.</p>
+      <!-- Cambia el action por tu servicio de formularios (Formspree, Getform, etc.) -->
+      <form class="contact" action="https://formspree.io/f/TU_ID" method="POST">
+        <label for="n">Nombre</label>
+        <input id="n" name="nombre" required>
+        <label for="e">Correo</label>
+        <input id="e" name="email" type="email" required>
+        <label for="m">Mensaje</label>
+        <textarea id="m" name="mensaje" rows="5" required></textarea>
+        <button class="btn" type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="block" id="privacidad">
+    <div class="wrap legal">
+      <h2>Política de privacidad</h2>
+      <p class="upd">Última actualización: 22 de noviembre de 2026</p>
+      <p>En vicehub.lat respetamos tu privacidad. Esta política explica qué datos se recopilan al visitar el sitio y cómo se usan.</p>
+      <h3>Datos que recopilamos</h3>
+      <ul>
+        <li>Datos de navegación anónimos (páginas vistas, tipo de dispositivo, país) mediante Google Analytics, solo si aceptas las cookies.</li>
+        <li>Nombre, correo y mensaje, si nos escribes por el formulario de contacto.</li>
+      </ul>
+      <h3>Publicidad de terceros</h3>
+      <p>Google y otros proveedores externos pueden mostrar anuncios en este sitio y usar cookies para mostrar anuncios según tus visitas anteriores. Puedes desactivar la publicidad personalizada en <a href="https://adssettings.google.com" rel="noopener" target="_blank">adssettings.google.com</a>.</p>
+      <h3>Enlaces de afiliados</h3>
+      <p>Algunos enlaces nos dan una comisión si realizas una compra. Esto no cambia el precio que pagas.</p>
+      <h3>Tus derechos</h3>
+      <p>Puedes pedir acceso, corrección o eliminación de tus datos escribiendo a contacto@vicehub.lat.</p>
+      <h3>Menores de edad</h3>
+      <p>Este sitio trata sobre un videojuego para mayores de 18 años. No recopilamos datos de menores de forma intencional.</p>
+    </div>
+  </section>
+
+  <section class="block" id="cookies-politica">
+    <div class="wrap legal">
+      <h2>Política de cookies</h2>
+      <p>Usamos cookies para tres fines:</p>
+      <ul>
+        <li><strong>Necesarias:</strong> guardan tu elección sobre cookies.</li>
+        <li><strong>Analítica:</strong> Google Analytics, para saber qué guías se leen más.</li>
+        <li><strong>Publicidad:</strong> Google AdSense y socios, para mostrar anuncios.</li>
+      </ul>
+      <p>Puedes cambiar tu decisión borrando las cookies de tu navegador y recargando la página, o con <button type="button" class="btn" style="padding:6px 14px;font-size:15px" onclick="reabrirCookies()">Cambiar preferencias</button></p>
+    </div>
+  </section>
+
+  <section class="block" id="aviso-legal">
+    <div class="wrap legal">
+      <h2>Aviso legal</h2>
+      <p>ViceHub LAT es un sitio independiente de fans. No está afiliado, respaldado ni patrocinado por Rockstar Games ni Take-Two Interactive.</p>
+      <p>Grand Theft Auto, Vice City y los nombres, logotipos y marcas relacionados pertenecen a sus respectivos dueños. Se mencionan solo con fines informativos.</p>
+      <p>Los trucos y estrategias pueden cambiar según la versión del juego. Úsalos bajo tu propia responsabilidad y guarda tu partida antes de probarlos.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Legal">
+      <a href="#sobre-nosotros">Sobre nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#privacidad">Privacidad</a>
+      <a href="#cookies-politica">Cookies</a>
+      <a href="#aviso-legal">Aviso legal</a>
+    </nav>
+    <p>© 2026 ViceHub LAT. Sitio de fans no oficial.</p>
+  </div>
+</footer>
+
+<div id="cookies" role="dialog" aria-label="Aviso de cookies">
+  Usamos cookies de analítica y publicidad. ¿Las aceptas? Más información en la <a href="#cookies-politica">política de cookies</a>.
+  <div class="row">
+    <button type="button" onclick="elegir('si')">Aceptar</button>
+    <button type="button" class="alt" onclick="elegir('no')">Solo necesarias</button>
+  </div>
+</div>
+
+<script>
+/* ---------- Ajustes que debes cambiar ---------- */
+var GA_ID = 'G-XXXXXXXXXX';           // tu ID de Google Analytics 4
+var ADSENSE_ID = 'ca-pub-XXXXXXXXXXXXXXXX'; // tu ID de AdSense (cuando te aprueben)
+
+/* ---------- Cookies ---------- */
+function leer(){ try{ return localStorage.getItem('cookies'); }catch(e){ return null; } }
+function guardar(v){ try{ localStorage.setItem('cookies', v); }catch(e){} }
+
+function cargarScript(src){
+  var s = document.createElement('script'); s.async = true; s.src = src;
+  document.head.appendChild(s);
+}
+function activarTerceros(){
+  if (GA_ID.indexOf('XXXX') === -1){
+    cargarScript('https://www.googletagmanager.com/gtag/js?id=' + GA_ID);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date()); gtag('config', GA_ID, { anonymize_ip: true });
+  }
+  if (ADSENSE_ID.indexOf('XXXX') === -1){
+    cargarScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_ID);
+  }
+}
+function elegir(v){
+  guardar(v);
+  document.getElementById('cookies').style.display = 'none';
+  if (v === 'si') activarTerceros();
+}
+function reabrirCookies(){ document.getElementById('cookies').style.display = 'block'; }
+
+var estado = leer();
+if (estado === 'si') activarTerceros();
+else if (!estado) reabrirCookies();
+
+/* ---------- Buscador simple ---------- */
+function buscar(e){
+  e.preventDefault();
+  var t = document.getElementById('q').value.toLowerCase().trim();
+  var tarjetas = document.querySelectorAll('#guias .card');
+  var hallada = null;
+  tarjetas.forEach(function(c){
+    if (!hallada && t && c.textContent.toLowerCase().indexOf(t) !== -1) hallada = c;
+  });
+  if (hallada){ hallada.scrollIntoView({behavior:'smooth', block:'center'}); }
+  return false;
+}
+
+/* ---------- Calculadora ---------- */
+function calcular(){
+  var meta = parseFloat(document.getElementById('meta').value);
+  var hora = parseFloat(document.getElementById('hora').value);
+  var out = document.getElementById('calcOut');
+  if (!(meta >= 0) || !(hora > 0)){ out.textContent = 'Escribe números válidos.'; return; }
+  var h = meta / hora, hh = Math.floor(h), mm = Math.round((h - hh) * 60);
+  out.textContent = hh + ' h ' + mm + ' min de juego';
+}
+</script>
 </body>
 </html>
